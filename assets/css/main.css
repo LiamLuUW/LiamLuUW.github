@@ -2191,7 +2191,7 @@
 			-webkit-transition: opacity 0.2s ease-in-out;
 			-ms-transition: opacity 0.2s ease-in-out;
 			transition: opacity 0.2s ease-in-out;
-			background: url("images/overlay.png");
+			/*background: url("images/overlay.png");*/
 			border-radius: 0.35em;
 			content: '';
 			display: block;
@@ -2741,7 +2741,7 @@
 		left: 0;
 		padding: 8em 4em;
 		position: fixed;
-		text-align: right;
+		text-align: center;
 		top: 0;
 		width: 35%;
 	}
@@ -2778,6 +2778,7 @@
 		}
 
 		#header .image.avatar {
+			border-radius: 0.65em;
 			margin: 0 0 1em 0;
 			width: 6.25em;
 		}
@@ -2817,6 +2818,47 @@
 			#footer .copyright li a {
 				color: inherit;
 			}
+
+/*Nav*/
+#header > nav {
+			-moz-flex-grow: 1;
+			-webkit-flex-grow: 1;
+			-ms-flex-grow: 1;
+			flex-grow: 1;
+		}
+
+			#header > nav ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+
+				#header > nav ul li {
+					border-top: solid 2px #5ccfb0;
+					display: block;
+					padding: 0;
+				}
+
+					#header > nav ul li a {
+						-moz-transition: none;
+						-webkit-transition: none;
+						-ms-transition: none;
+						transition: none;
+						border: 0;
+						color: #ffffff !important;
+						display: block;
+						padding: 0.85em 0;
+						text-decoration: none;
+						text-align: center;
+					}
+					
+					#header > nav ul li:first-child {
+						border-top: 0;
+					}
+
+					nav a:hover{
+						background-color: #5ccfb0;
+					}
 
 /* Main */
 
@@ -3137,45 +3179,7 @@
 					}
 
 
-			#header > nav {
-			-moz-flex-grow: 1;
-			-webkit-flex-grow: 1;
-			-ms-flex-grow: 1;
-			flex-grow: 1;
-		}
-
-			#header > nav ul {
-				list-style: none;
-				margin: 0;
-				padding: 0;
-			}
-
-				#header > nav ul li {
-					border-top: solid 2px #5ccfb0;
-					display: block;
-					padding: 0;
-				}
-
-					#header > nav ul li a {
-						-moz-transition: none;
-						-webkit-transition: none;
-						-ms-transition: none;
-						transition: none;
-						border: 0;
-						color: #ffffff !important;
-						display: block;
-						padding: 0.85em 0;
-						text-decoration: none;
-					}
-/*
-						#header > nav ul li a.active {
-							background: #fff;
-							color: #4acaa8 !important;
-						}
-					*/
-					#header > nav ul li:first-child {
-						border-top: 0;
-					}
+			
 
 		/* Footer */
 
@@ -3357,6 +3361,10 @@
 				}
 
 		/*Timeline*/
+		.timeline{
+			overflow-x: hidden;
+		}
+
 		.timeline ul li {
  		   margin-left: 20px;
  		 }
